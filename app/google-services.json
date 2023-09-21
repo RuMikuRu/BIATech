@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "778473439002",
+    "project_id": "biotech-74463",
+    "storage_bucket": "biotech-74463.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778473439002:android:b64caec238c37ae1fb36a3",
+        "android_client_info": {
+          "package_name": "com.example.biatech"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEjBjwUdTX1hPz1DCftnRSgmDLo7TQEfI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778473439002:android:2f9947d39f4d076cfb36a3",
+        "android_client_info": {
+          "package_name": "com.rumikuru.skdumobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEjBjwUdTX1hPz1DCftnRSgmDLo7TQEfI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
