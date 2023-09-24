@@ -21,12 +21,10 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.biatech.ui.components.atom.FourDigitCodeField
 import com.example.biatech.ui.components.atom.LogoAndText
 import com.example.biatech.ui.components.atom.PhoneField
 import com.example.biatech.ui.components.atom.PrimaryActiveButton
-import com.example.biatech.ui.components.atom.PrimaryInactiveButton
 import com.example.biatech.viewModel.Factory.FactoryViewModel
 import com.example.biatech.viewModel.LoginScreenViewModel
 
@@ -41,7 +39,7 @@ fun LogInScreen() {
     var stateCodeField by remember {
         mutableStateOf(false)
     }
-    var code:String = ""
+    var code: String = ""
     Column(modifier = Modifier.fillMaxSize()) {
         Column(
             verticalArrangement = Arrangement.spacedBy(24.dp, Alignment.Top),
@@ -77,12 +75,24 @@ fun LogInScreen() {
                     stateCodeField = true
                 })
             } else {
-                FourDigitCodeField(onCodeChanged = {code = it })
-                PrimaryActiveButton(onClick = { if(viewModel.checkCode(code)){
+                FourDigitCodeField(onCodeChanged = { code = it })
+                PrimaryActiveButton(onClick = {
+                    if (viewModel.checkCode(code)) {
 
-                }
+                    }
                 })
             }
+            PhoneField(
+                phone = phoneNumber,
+                mask = "+7 (000)-000-00-00",
+                onPhoneChanged = { phoneNumber = it },
+                maskNumber = '0',
+                modifier = Modifier
+                    .padding(horizontal = 16.dp)
+                    .fillMaxWidth(),
+            )
+
+            PrimaryActiveButton(onClick = { viewModel.loginRequest(phoneNumber) })
         }
     }
 }

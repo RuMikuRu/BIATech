@@ -1,11 +1,10 @@
-@file:Suppress("UNUSED_EXPRESSION")
-
-package com.example.biatech.ui.components.atom
+package com.example.biatech.ui.theme.components.atom
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -39,7 +38,7 @@ fun ButtonNavBar(text: String, onClick: () -> Unit, @DrawableRes painterResource
                 Icon(
                     painter = painterResource(id = painterResource),
                     contentDescription = "",
-                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
                 )
             }
             Text(
